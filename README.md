@@ -3,33 +3,47 @@
 You'll need to set these hooks up in `~/.claude/settings.json`:
 
 ```
-{
-  ...
-  "hooks" : {
-    "UserPromptSubmit" : [
-      {
-        "type" : "command",
-        "command" : "echo working > ~/.claude/companion-state"
-      }
-    ],
-    "PreToolUse" : [
-      {
-        "type" : "command",
-        "command" : "echo working > ~/.claude/companion-state"
-      }
-    ],
-    "PermissionRequest" : [
-      {
-        "type" : "command",
-        "command" : "echo needsInput > ~/.claude/companion-state"
-      }
-    ],
-    "Stop" : [
-      {
-        "type" : "command",
-        "command" : "echo success > ~/.claude/companion-state"
-      }
-    ]
-  }
-}
+"hooks": {
+  "Notification": [
+    {
+      "matcher": "permission_prompt",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "echo needsInput > ~/.claude/companion-state"
+        }
+      ]
+    }
+  ],
+  "UserPromptSubmit": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "echo working > ~/.claude/companion-state"
+        }
+      ]
+    }
+  ],
+  "PreToolUse": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "echo working > ~/.claude/companion-state"
+        }
+      ]
+    }
+  ],
+  "Stop": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "echo success > ~/.claude/companion-state"
+        }
+      ]
+    }
+  ]
+},
 ```
