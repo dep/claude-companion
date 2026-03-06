@@ -48,23 +48,24 @@ class SoundManager {
         switch state {
         case .working:
             let taskStartSounds = [
-                "quiet_quiet_ok.wav",
-                "quiet_okie-dokie.mp3",
-                "quiet_hmm-whatever.mp3",
-                "quiet_hmm-ok-2.mp3",
-                "quiet_hmm-ok-1.mp3",
+                "ok.wav",
+                "okie-dokie-1.mp3",
+                "okie-dokie-2.mp3",
+                "hmm-whatever.mp3",
+                "hmmm.mp3",
+                "hmm-ok-2.mp3",
+                "hmm-ok-1.mp3",
             ]
             play(taskStartSounds.randomElement()!)
-            play("quiet_quiet_quiet_music.mp3", loop: true)
         case .needsInput:
             stopLoop()
-            play("quiet_quiet_hmmm.mp3")
+            play("hmmm.mp3")
         case .success:
             stopLoop()
             let finishedSounds = [
-                "quiet_quiet_all-done.mp3",
-                "quiet_there-you-go.mp3",
-                "quiet_finished.mp3",
+                "all-done.mp3",
+                "there-you-go.mp3",
+                "finished.mp3",
             ]
             play(finishedSounds.randomElement()!)
         case .idle, .spinning:
@@ -73,6 +74,6 @@ class SoundManager {
     }
 
     func onTap() {
-        play("quiet_quiet_giggle.mp3")
+        play("giggle.mp3")
     }
 }
