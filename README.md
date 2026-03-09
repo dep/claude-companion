@@ -40,7 +40,7 @@ Add the following to `~/.claude/settings.json` to wire up the companion state:
       "hooks": [
         {
           "type": "command",
-          "command": "echo working > ~/.claude/companion-state"
+          "command": "jq -r '.prompt // empty' > ~/.claude/companion-prompt; echo working > ~/.claude/companion-state"
         }
       ]
     }
@@ -68,22 +68,32 @@ Add the following to `~/.claude/settings.json` to wire up the companion state:
 }
 ```
 
+`UserPromptSubmit` hooks receive the payload on stdin as JSON — the `jq` command extracts the prompt text and writes it to `~/.claude/companion-prompt` so Mana can react contextually to what you asked.
+
 ## opencode Hooks Setup
 
-Copy or symlink the included plugin to opencode's plugins directory:
+Symlink the included plugin into opencode's plugins directory so updates are picked up automatically:
 
 ```bash
 mkdir -p ~/.config/opencode/plugins
-cp companion-opencode-plugin.js ~/.config/opencode/plugins/claude-companion.js
-# or symlink to pick up updates automatically:
-# ln -s /path/to/claude-companion/companion-opencode-plugin.js ~/.config/opencode/plugins/claude-companion.js
+ln -s /path/to/claude-companion/companion-opencode-plugin.js ~/.config/opencode/plugins/claude-companion.js
 ```
 
-The plugin maps opencode lifecycle events to the same `~/.claude/companion-state` file:
+Or copy if you prefer a static install:
+
+```bash
+cp companion-opencode-plugin.js ~/.config/opencode/plugins/claude-companion.js
+```
+
+The plugin maps opencode lifecycle events to the same state files:
 
 | opencode event | companion state |
 |---|---|
-| `tui.prompt.append` | `working` |
+| `chat.message` | `working` |
 | `tool.execute.before` | `working` |
-| `permission.asked` | `needsInput` |
+| `permission.ask` | `needsInput` |
 | `session.idle` | `success` |
+
+## Sound Effects
+
+Mana plays audio cues on state transitions. The sounds are bundled in the app — no additional setup required. Tapping Mana while she's spinning dismisses the spin and resyncs to the current agent state.

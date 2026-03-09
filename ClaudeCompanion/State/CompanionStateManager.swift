@@ -58,6 +58,16 @@ class CompanionStateManager: ObservableObject {
         transition(to: spinReturnState)
     }
 
+    func forceIdle() {
+        guard currentState != .idle else { return }
+        doneTimer?.invalidate()
+        doneTimer = nil
+        spinReturnState = .idle
+        try? "idle".write(toFile: hookMonitor.stateFilePath, atomically: true, encoding: .utf8)
+        hookMonitor.resetLastEmitted()
+        transition(to: .idle)
+    }
+
     func reset() {
         doneTimer?.invalidate()
         doneTimer = nil

@@ -5,17 +5,23 @@ export const ClaudeCompanionPlugin = async ({ $ }) => {
   const setState = (state) => $`echo ${state} > ~/.claude/companion-state`
 
   return {
-    "tui.prompt.append": async () => {
+    // Fired when the user sends a message — mark as working immediately
+    "chat.message": async () => {
       await setState("working")
     },
+    // Belt-and-suspenders: also mark working when a tool fires
     "tool.execute.before": async () => {
       await setState("working")
     },
-    "permission.asked": async () => {
+    // Fired when opencode is waiting for permission approval
+    "permission.ask": async () => {
       await setState("needsInput")
     },
-    "session.idle": async () => {
-      await setState("success")
+    // Fired when the session goes idle (agent is done)
+    event: async ({ event }) => {
+      if (event.type === "session.idle") {
+        await setState("success")
+      }
     },
   }
 }
