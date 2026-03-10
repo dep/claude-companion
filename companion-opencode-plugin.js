@@ -14,7 +14,7 @@ export const ClaudeCompanionPlugin = async ({ $ }) => {
       await setState("working")
     },
     // Fired when opencode is waiting for permission approval
-    "permission.ask": async () => {
+    "permission.asked": async () => {
       await setState("needsInput")
     },
     // Fired when the session goes idle (agent is done)
