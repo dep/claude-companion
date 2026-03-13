@@ -3,6 +3,7 @@ import AppKit
 
 struct CharacterView: View {
     @ObservedObject var stateManager: CompanionStateManager
+    @ObservedObject private var soundManager = SoundManager.shared
     @State private var bubbleMessage: String = ""
     @State private var bubbleOpacity: Double = 0
     @State private var bubbleTask: Task<Void, Never>?
@@ -39,6 +40,11 @@ struct CharacterView: View {
                 }
                 .contextMenu {
                     Button("Hide") { NSApp.hide(nil) }
+                    Divider()
+                    Button(soundManager.isMuted ? "Unmute" : "Mute") {
+                        soundManager.isMuted.toggle()
+                        if soundManager.isMuted { soundManager.stopLoop() }
+                    }
                     Divider()
                     Button("Quit Claude Companion") { NSApp.terminate(nil) }
                 }

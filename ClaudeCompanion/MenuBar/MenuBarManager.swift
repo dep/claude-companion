@@ -31,6 +31,16 @@ class MenuBarManager {
         menu.addItem(loginItem)
 
         menu.addItem(.separator())
+
+        let muteItem = NSMenuItem(
+            title: SoundManager.shared.isMuted ? "Unmute" : "Mute",
+            action: #selector(toggleMute),
+            keyEquivalent: ""
+        )
+        muteItem.target = self
+        menu.addItem(muteItem)
+
+        menu.addItem(.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         statusItem?.menu = menu
     }
@@ -38,6 +48,14 @@ class MenuBarManager {
     @objc private func toggleLoginItem() {
         LoginItemManager.shared.toggle()
         buildMenu() // Refresh menu title
+    }
+
+    @objc private func toggleMute() {
+        SoundManager.shared.isMuted.toggle()
+        if SoundManager.shared.isMuted {
+            SoundManager.shared.stopLoop()
+        }
+        buildMenu()
     }
 
     @objc private func togglePanel() {
