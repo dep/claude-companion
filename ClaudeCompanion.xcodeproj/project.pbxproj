@@ -242,10 +242,9 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = B96B4EB5531E67FEB8E9D90B /* Build configuration list for PBXProject "ClaudeCompanion" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -255,7 +254,6 @@
 			mainGroup = EC352742605110B85DECB17B;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = C8ACAB04B2A18F5A270D5BDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

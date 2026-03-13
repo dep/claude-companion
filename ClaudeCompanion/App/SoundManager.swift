@@ -1,15 +1,17 @@
 import AVFoundation
 import AppKit
 
-class SoundManager {
+class SoundManager: ObservableObject {
     static let shared = SoundManager()
 
     private var loopSound: NSSound?
     private var oneShots: [AVAudioPlayer] = []
+    @Published var isMuted: Bool = false
 
     private init() {}
 
     func play(_ name: String, loop: Bool = false) {
+        guard !isMuted else { return }
         guard let url = Bundle.main.url(forResource: name, withExtension: nil) else {
             NSLog("[SoundManager] Missing sound: \(name)")
             return
