@@ -6,9 +6,19 @@ class SoundManager: ObservableObject {
 
     private var loopSound: NSSound?
     private var oneShots: [AVAudioPlayer] = []
-    @Published var isMuted: Bool = false
 
-    private init() {}
+    @Published var isMuted: Bool {
+        didSet { UserDefaults.standard.set(isMuted, forKey: "soundMuted") }
+    }
+    @Published var volume: Float {
+        didSet { UserDefaults.standard.set(volume, forKey: "soundVolume") }
+    }
+
+    private init() {
+        isMuted = UserDefaults.standard.bool(forKey: "soundMuted")
+        let stored = UserDefaults.standard.float(forKey: "soundVolume")
+        volume = stored > 0 ? stored : 1.0
+    }
 
     func play(_ name: String, loop: Bool = false) {
         guard !isMuted else { return }
@@ -23,14 +33,14 @@ class SoundManager: ObservableObject {
                 return
             }
             sound.loops = true
-            sound.volume = 1.0
+            sound.volume = volume
             let ok = sound.play()
             NSLog("[SoundManager] loop play(\(name)) started=\(ok)")
             loopSound = sound
         } else {
             do {
                 let player = try AVAudioPlayer(contentsOf: url)
-                player.volume = 0.8
+                player.volume = volume
                 let ok = player.play()
                 NSLog("[SoundManager] one-shot play(\(name)) started=\(ok)")
                 oneShots.append(player)

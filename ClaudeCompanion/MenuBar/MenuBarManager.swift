@@ -32,6 +32,20 @@ class MenuBarManager {
 
         menu.addItem(.separator())
 
+        let volumeItem = NSMenuItem(title: "Volume", action: nil, keyEquivalent: "")
+        let volumeMenu = NSMenu()
+        for (label, value) in [("10%", Float(0.1)), ("25%", Float(0.25)), ("50%", Float(0.5)), ("75%", Float(0.75)), ("100%", Float(1.0))] {
+            let item = NSMenuItem(title: label, action: #selector(setVolume(_:)), keyEquivalent: "")
+            item.target = self
+            item.tag = Int(value * 100)
+            item.state = SoundManager.shared.volume == value ? .on : .off
+            volumeMenu.addItem(item)
+        }
+        volumeItem.submenu = volumeMenu
+        menu.addItem(volumeItem)
+
+        menu.addItem(.separator())
+
         let muteItem = NSMenuItem(
             title: SoundManager.shared.isMuted ? "Unmute" : "Mute",
             action: #selector(toggleMute),
@@ -48,6 +62,11 @@ class MenuBarManager {
     @objc private func toggleLoginItem() {
         LoginItemManager.shared.toggle()
         buildMenu() // Refresh menu title
+    }
+
+    @objc private func setVolume(_ sender: NSMenuItem) {
+        SoundManager.shared.volume = Float(sender.tag) / 100.0
+        buildMenu()
     }
 
     @objc private func toggleMute() {
