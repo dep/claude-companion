@@ -1,6 +1,17 @@
 .DS_Store
 
 # AI custom context (personal/team preferences, gitignored)
-.agents/USER_RULES.md
-.agents/TEAM_RULES.md
-.agents/LEARNING_LOG.md
+.agents/
+.claude/
+.codex/
+.cursor/
+.opencode/
+
+.env
+
+AGENTS.md
+CLAUDE.md
+CODEX.md
+
+agent-sync.json
+
