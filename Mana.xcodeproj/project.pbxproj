@@ -34,7 +34,7 @@
 		9E9897ACE7AF3FC2B8165238 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F697814E036E1C51D1B46 /* SoundManager.swift */; };
 		A0B3BE104710D1FB7DD9BFB9 /* giggle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B242FE3404E0AC55138C26D9 /* giggle.mp3 */; };
 		A52B36D75BFCE76410CF1D4D /* CompanionStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9277B0AEF9C8AA5F5B889E1 /* CompanionStateManager.swift */; };
-		A8C0897450B1330A8A8FD573 /* ClaudeCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB73E20EE43899F853C0165 /* ClaudeCompanionApp.swift */; };
+		A8C0897450B1330A8A8FD573 /* ManaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB73E20EE43899F853C0165 /* ManaApp.swift */; };
 		AAD96EDE18373BD2BCA7FD2E /* there-you-go.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4EBAFA2E53E637998AE9E97 /* there-you-go.mp3 */; };
 		B2BCCD5F854F9ED809D9A4E1 /* working.json in Resources */ = {isa = PBXBuildFile; fileRef = F499EDC8525F4D22AC0CD32D /* working.json */; };
 		C3E89DDD6D4C4E0CB714E4C0 /* DraggableHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3798F818F999C236479F1B9 /* DraggableHostingView.swift */; };
@@ -68,7 +68,7 @@
 		9F59896E3CA39059CAF7A755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB76C93BF65A3A3790BF5E79 /* okie-dokie-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "okie-dokie-1.mp3"; sourceTree = "<group>"; };
 		AD1BE7365B032AD3C7AC2938 /* LoginItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemManager.swift; sourceTree = "<group>"; };
-		B0E5B9B07B2295C59E62949C /* ClaudeCompanion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClaudeCompanion.entitlements; sourceTree = "<group>"; };
+		B0E5B9B07B2295C59E62949C /* Mana.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mana.entitlements; sourceTree = "<group>"; };
 		B242FE3404E0AC55138C26D9 /* giggle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = giggle.mp3; sourceTree = "<group>"; };
 		B798209633C17DF880556525 /* ok.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ok.wav; sourceTree = "<group>"; };
 		B86F697814E036E1C51D1B46 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -76,11 +76,11 @@
 		C3798F818F999C236479F1B9 /* DraggableHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableHostingView.swift; sourceTree = "<group>"; };
 		C3E5F32BD15700AFDF0571C4 /* spin.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = spin.mov; sourceTree = "<group>"; };
 		C4EBAFA2E53E637998AE9E97 /* there-you-go.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "there-you-go.mp3"; sourceTree = "<group>"; };
-		C7566AC2544D15CDAF978A77 /* ClaudeCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClaudeCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7566AC2544D15CDAF978A77 /* Mana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C04632EAE557C080EA9B04 /* okie-dokie-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "okie-dokie-2.mp3"; sourceTree = "<group>"; };
 		CBFC33EF0FB62268DF7F2A82 /* dancing.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = dancing.mov; sourceTree = "<group>"; };
 		D86C2AF967F8A332A088107A /* hmm-whatever.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hmm-whatever.mp3"; sourceTree = "<group>"; };
-		DFB73E20EE43899F853C0165 /* ClaudeCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeCompanionApp.swift; sourceTree = "<group>"; };
+		DFB73E20EE43899F853C0165 /* ManaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManaApp.swift; sourceTree = "<group>"; };
 		E823C4B2891EEECBD22E6004 /* thinking.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = thinking.mov; sourceTree = "<group>"; };
 		F47413E0500DBA950D117E2D /* HookStateMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HookStateMonitor.swift; sourceTree = "<group>"; };
 		F499EDC8525F4D22AC0CD32D /* working.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = working.json; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			path = MenuBar;
 			sourceTree = "<group>";
 		};
-		297263E28DAE292A72027674 /* ClaudeCompanion */ = {
+		297263E28DAE292A72027674 /* Mana */ = {
 			isa = PBXGroup;
 			children = (
 				CE7CC4B285189C0E590B6A37 /* App */,
@@ -107,7 +107,7 @@
 				9814474696EF61251951C8F1 /* State */,
 				DA64987FDE871FF6C13202D8 /* Window */,
 			);
-			path = ClaudeCompanion;
+			path = Mana;
 			sourceTree = "<group>";
 		};
 		3A9991C4B3452F960D1ABEBE /* Monitoring */ = {
@@ -132,7 +132,7 @@
 			children = (
 				2EE4EAC50C9DF9E840B7B22E /* all-done.mp3 */,
 				9F59896E3CA39059CAF7A755 /* Assets.xcassets */,
-				B0E5B9B07B2295C59E62949C /* ClaudeCompanion.entitlements */,
+				B0E5B9B07B2295C59E62949C /* Mana.entitlements */,
 				8DC4EB5C3EB084C2FB70C3DC /* finished.mp3 */,
 				B242FE3404E0AC55138C26D9 /* giggle.mp3 */,
 				555CB7087FB63007241E0939 /* hmm-ok-1.mp3 */,
@@ -163,7 +163,7 @@
 		C8ACAB04B2A18F5A270D5BDE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7566AC2544D15CDAF978A77 /* ClaudeCompanion.app */,
+				C7566AC2544D15CDAF978A77 /* Mana.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				44E16776C91CF29589C224D4 /* AppDelegate.swift */,
-				DFB73E20EE43899F853C0165 /* ClaudeCompanionApp.swift */,
+				DFB73E20EE43899F853C0165 /* ManaApp.swift */,
 				7D21D479CC2237FD748CBAB7 /* ClaudeService.swift */,
 				AD1BE7365B032AD3C7AC2938 /* LoginItemManager.swift */,
 				B86F697814E036E1C51D1B46 /* SoundManager.swift */,
@@ -208,7 +208,7 @@
 		EC352742605110B85DECB17B = {
 			isa = PBXGroup;
 			children = (
-				297263E28DAE292A72027674 /* ClaudeCompanion */,
+				297263E28DAE292A72027674 /* Mana */,
 				C8ACAB04B2A18F5A270D5BDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		44B4B48F3F51A91E9B65F6BB /* ClaudeCompanion */ = {
+		44B4B48F3F51A91E9B65F6BB /* Mana */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C165742061695632CC74AA61 /* Build configuration list for PBXNativeTarget "ClaudeCompanion" */;
+			buildConfigurationList = C165742061695632CC74AA61 /* Build configuration list for PBXNativeTarget "Mana" */;
 			buildPhases = (
 				5AB6F8243C91C2D8869D90A6 /* Sources */,
 				6EF5E0FD81B2B6BAF21C3C07 /* Resources */,
@@ -227,11 +227,11 @@
 			);
 			dependencies = (
 			);
-			name = ClaudeCompanion;
+			name = Mana;
 			packageProductDependencies = (
 			);
-			productName = ClaudeCompanion;
-			productReference = C7566AC2544D15CDAF978A77 /* ClaudeCompanion.app */;
+			productName = Mana;
+			productReference = C7566AC2544D15CDAF978A77 /* Mana.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -245,7 +245,7 @@
 				TargetAttributes = {
 				};
 			};
-			buildConfigurationList = B96B4EB5531E67FEB8E9D90B /* Build configuration list for PBXProject "ClaudeCompanion" */;
+			buildConfigurationList = B96B4EB5531E67FEB8E9D90B /* Build configuration list for PBXProject "Mana" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -259,7 +259,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				44B4B48F3F51A91E9B65F6BB /* ClaudeCompanion */,
+				44B4B48F3F51A91E9B65F6BB /* Mana */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 			files = (
 				70731C467C391A1A741FD807 /* AppDelegate.swift in Sources */,
 				4CBEB684C9ACA8004BF34E27 /* CharacterView.swift in Sources */,
-				A8C0897450B1330A8A8FD573 /* ClaudeCompanionApp.swift in Sources */,
+				A8C0897450B1330A8A8FD573 /* ManaApp.swift in Sources */,
 				D8317EAA2F7332AE09CA607E /* ClaudeService.swift in Sources */,
 				5C8C4A973F3EBBC0F9DBBDEA /* CompanionPanel.swift in Sources */,
 				70127F5CD9644F13CFF427EA /* CompanionState.swift in Sources */,
@@ -325,18 +325,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ClaudeCompanion/Resources/ClaudeCompanion.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Mana/Resources/Mana.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = ClaudeCompanion/Resources/Info.plist;
+				INFOPLIST_FILE = Mana/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pecknology.ClaudeCompanion;
-				PRODUCT_NAME = ClaudeCompanion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pecknology.Mana;
+				PRODUCT_NAME = Mana;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -402,18 +402,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ClaudeCompanion/Resources/ClaudeCompanion.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Mana/Resources/Mana.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = ClaudeCompanion/Resources/Info.plist;
+				INFOPLIST_FILE = Mana/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pecknology.ClaudeCompanion;
-				PRODUCT_NAME = ClaudeCompanion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pecknology.Mana;
+				PRODUCT_NAME = Mana;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -485,7 +485,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B96B4EB5531E67FEB8E9D90B /* Build configuration list for PBXProject "ClaudeCompanion" */ = {
+		B96B4EB5531E67FEB8E9D90B /* Build configuration list for PBXProject "Mana" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ACF2FB9CB67CFE14B4C30ECC /* Debug */,
@@ -494,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C165742061695632CC74AA61 /* Build configuration list for PBXNativeTarget "ClaudeCompanion" */ = {
+		C165742061695632CC74AA61 /* Build configuration list for PBXNativeTarget "Mana" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1304197EB8F3CFA0E619FE49 /* Debug */,

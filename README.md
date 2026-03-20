@@ -1,4 +1,4 @@
-# claude-companion
+# mana: a claude companion
 
 A Claude Code companion built for MacOS that floats on top of your windows and reacts to Claude Code and opencode activity via hooks.
 
@@ -6,7 +6,7 @@ A Claude Code companion built for MacOS that floats on top of your windows and r
 
 ## Download
 
-Grab the latest notarized build from [Releases](https://github.com/dep/claude-companion/releases) — no Xcode required.
+Grab the latest notarized build from [Releases](https://github.com/dep/mana/releases) — no Xcode required.
 
 ## Build & Run
 
@@ -14,8 +14,8 @@ Grab the latest notarized build from [Releases](https://github.com/dep/claude-co
 
 ```bash
 xcodegen generate
-xcodebuild -project ClaudeCompanion.xcodeproj -scheme ClaudeCompanion -configuration Debug build
-open ~/Library/Developer/Xcode/DerivedData/ClaudeCompanion-*/Build/Products/Debug/ClaudeCompanion.app
+xcodebuild -project Mana.xcodeproj -scheme Mana -configuration Debug build
+open ~/Library/Developer/Xcode/DerivedData/Mana-*/Build/Products/Debug/Mana.app
 ```
 
 ## Claude Code Hooks Setup
@@ -76,13 +76,13 @@ Symlink the included plugin into opencode's plugins directory so updates are pic
 
 ```bash
 mkdir -p ~/.config/opencode/plugins
-ln -s /path/to/claude-companion/companion-opencode-plugin.js ~/.config/opencode/plugins/claude-companion.js
+ln -s /path/to/mana/companion-opencode-plugin.js ~/.config/opencode/plugins/mana.js
 ```
 
 Or copy if you prefer a static install:
 
 ```bash
-cp companion-opencode-plugin.js ~/.config/opencode/plugins/claude-companion.js
+cp companion-opencode-plugin.js ~/.config/opencode/plugins/mana.js
 ```
 
 The plugin maps opencode lifecycle events to the same state files:

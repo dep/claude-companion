@@ -1,20 +1,20 @@
-name: ClaudeCompanion
+name: Mana
 options:
   bundleIdPrefix: com.pecknology
   deploymentTarget:
     macOS: "13.0"
 targets:
-  ClaudeCompanion:
+  Mana:
     type: application
     platform: macOS
     sources:
-      - ClaudeCompanion
+      - Mana
     settings:
       base:
-        PRODUCT_NAME: ClaudeCompanion
-        PRODUCT_BUNDLE_IDENTIFIER: com.pecknology.ClaudeCompanion
-        INFOPLIST_FILE: ClaudeCompanion/Resources/Info.plist
-        CODE_SIGN_ENTITLEMENTS: ClaudeCompanion/Resources/ClaudeCompanion.entitlements
+        PRODUCT_NAME: Mana
+        PRODUCT_BUNDLE_IDENTIFIER: com.pecknology.Mana
+        INFOPLIST_FILE: Mana/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Mana/Resources/Mana.entitlements
         SWIFT_VERSION: "5.0"
         MACOSX_DEPLOYMENT_TARGET: "13.0"
         ENABLE_HARDENED_RUNTIME: YES
@@ -25,5 +25,5 @@ targets:
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: 299R8V27FZ
     resources:
-      - path: ClaudeCompanion/Resources
+      - path: Mana/Resources
         buildPhase: resources

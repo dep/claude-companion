@@ -1,7 +1,7 @@
-// ClaudeCompanion plugin for opencode
-// Install: copy or symlink to ~/.config/opencode/plugins/claude-companion.js
+// Mana plugin for opencode
+// Install: copy or symlink to ~/.config/opencode/plugins/mana.js
 
-export const ClaudeCompanionPlugin = async ({ $ }) => {
+export const ManaPlugin = async ({ $ }) => {
   const setState = (state) => $`echo ${state} > ~/.claude/companion-state`
 
   return {
