@@ -3,24 +3,29 @@
 
 export const ManaPlugin = async ({ $ }) => {
   const setState = (state) => $`echo ${state} > ~/.claude/companion-state`
+  let doneTimer
 
   return {
     // Fired when the user sends a message — mark as working immediately
     "chat.message": async () => {
+      clearTimeout(doneTimer)
       await setState("working")
     },
     // Belt-and-suspenders: also mark working when a tool fires
     "tool.execute.before": async () => {
+      clearTimeout(doneTimer)
       await setState("working")
     },
     // Fired when opencode is waiting for permission approval
     "permission.ask": async () => {
+      clearTimeout(doneTimer)
       await setState("needsInput")
     },
-    // Fired when the session goes idle (agent is done)
+    // Debounce session.idle — it can fire between steps, not just at final completion
     event: async ({ event }) => {
       if (event.type === "session.idle") {
-        await setState("success")
+        clearTimeout(doneTimer)
+        doneTimer = setTimeout(() => setState("success"), 500)
       }
     },
   }
