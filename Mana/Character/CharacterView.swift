@@ -34,6 +34,8 @@ struct CharacterView: View {
                     SoundManager.shared.onTap()
                     if stateManager.currentState == .spinning {
                         stateManager.reset()
+                    } else if stateManager.currentState == .working {
+                        stateManager.forceIdle()
                     } else {
                         stateManager.spin()
                     }
